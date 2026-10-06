@@ -1,54 +1,86 @@
-const collapse = document.getElementsByClassName("btn_pergunta")
-let id = 0
-let content;
+/*
+ * Perguntas frequentes, menu mobile, cabeçalho e animações de entrada.
+ *
+ * O FAQ usa <details>/<summary>: abre e fecha nativamente, inclusive sem JS,
+ * e é acessível por teclado e leitores de tela. Este script garante que
+ * apenas uma resposta fique aberta por vez, como no comportamento original,
+ * também em navegadores que ainda não suportam o atributo name="faq".
+ */
+(function () {
+    "use strict";
 
-for (let i = 0; i < collapse.length; i++) {
-    collapse[i].id = id
-    id++
-    collapse[i].addEventListener("click", function() {
-        this.classList.toggle("activeColl")
-        
-        let pergunta = this.innerHTML.split(" ")
-        if (pergunta[0] == "▾") {
-            pergunta[0] = "▴"
-        } else {
-            pergunta[0] = "▾"
-        }
+    document.documentElement.classList.add("js");
 
-        pergunta = pergunta.join(" ")
-        this.innerHTML = pergunta
+    // FAQ: uma resposta aberta por vez
+    var faqItems = document.querySelectorAll(".faq-item");
 
-        for (let i = 0; i < collapse.length; i++) {
-            if (collapse[i].id == this.id) {              
-                
-                if (collapse[i].style.borderRadius == "15px 15px 0px 0px") {
-                    collapse[i].style.borderRadius = "15px"
-                    collapse[i].style.borderBottom = "solid 1px #000"
-                } else {
-                    collapse[i].style.borderRadius = "15px 15px 0 0"
-                    collapse[i].style.borderBottom = "0"
+    Array.prototype.forEach.call(faqItems, function (item) {
+        item.addEventListener("toggle", function () {
+            if (!item.open) return;
+            Array.prototype.forEach.call(faqItems, function (other) {
+                if (other !== item && other.open) other.open = false;
+            });
+        });
+    });
+
+    // Cabeçalho muda de fundo ao rolar
+    var header = document.querySelector(".site-header");
+    function onScroll() {
+        if (header) header.classList.toggle("is-scrolled", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Animações de entrada ao rolar
+    var revealEls = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
                 }
+            });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        Array.prototype.forEach.call(revealEls, function (el) { observer.observe(el); });
+    } else {
+        Array.prototype.forEach.call(revealEls, function (el) { el.classList.add("is-visible"); });
+    }
 
-                content = this.nextElementSibling
-                if (content.style.display === 'block'){
-                    content.style.display = ''
-                } else {
-                    content.style.display = 'block'
-                }
+    // Menu mobile
+    var toggle = document.querySelector(".nav-toggle");
+    var nav = document.getElementById("menu-principal");
+    if (!toggle || !nav) return;
 
-            } else {
-                content = collapse[i].nextElementSibling
-                content.style.display = ''
+    var label = toggle.querySelector(".sr-only");
 
-                let arruma = collapse[i].innerHTML.split(" ")
-                arruma[0] = "▾"
-                arruma = arruma.join(" ")
-                collapse[i].innerHTML = arruma
+    function setOpen(open) {
+        toggle.setAttribute("aria-expanded", String(open));
+        nav.classList.toggle("is-open", open);
+        if (label) label.textContent = open ? "Fechar menu" : "Abrir menu";
+    }
 
-                collapse[i].style.borderRadius = "15px"
-                collapse[i].style.borderBottom = "solid 1px #000"
-            }   
+    toggle.addEventListener("click", function () {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+    });
+
+    nav.addEventListener("click", function (event) {
+        if (event.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && nav.classList.contains("is-open")) {
+            setOpen(false);
+            toggle.focus();
         }
+    });
 
-    })
-}
+    document.addEventListener("click", function (event) {
+        if (!nav.classList.contains("is-open")) return;
+        if (!nav.contains(event.target) && !toggle.contains(event.target)) setOpen(false);
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900 && nav.classList.contains("is-open")) setOpen(false);
+    });
+})();

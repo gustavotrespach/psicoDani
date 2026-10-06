@@ -2,305 +2,550 @@
 <html lang="pt-br">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Junge&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Kadwa:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="icon" media="(prefers-color-scheme: light)" href="/imagens/icone-preto.ico">
-    <link rel="icon" media="(prefers-color-scheme: dark)" href="/imagens/icone-branco.ico">
-
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicóloga Daniela Bézi</title>
+    <meta name="description"
+        content="Daniela Saraiva Cardoso Bézi, psicóloga clínica em Capão da Canoa - RS. Atendimento presencial e online para crianças, adolescentes e adultos.">
+    <meta name="theme-color" content="#D3C3A2">
+    <script>document.documentElement.classList.add("js");</script>
+
+    <link rel="icon" media="(prefers-color-scheme: light)" href="imagens/icone-preto.ico">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="imagens/icone-branco.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Mulish:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" as="image" href="imagens/fotos/daniela-recorte-1400.webp"
+        imagesrcset="imagens/fotos/daniela-recorte-800.webp 533w, imagens/fotos/daniela-recorte-1400.webp 933w"
+        imagesizes="(max-width: 900px) 70vw, 460px">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="logo">
-        <img src="/imagens/logo.png" alt="logo Psicologa Daniela Bêzi">
-        <div class="frase">
-            <p style="font-size: 50px;">“</p>
-            <p style="font-size: 37px; text-align: center;">A psicoterapia não muda a sua história... <br> mas lhe
-                oferece novos olhares
-                sobre ela.</p>
-            <p style="font-size: 50px;">”</p>
-            <p style="font-size: 18px;">Lavinia Lins</p>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#inicio" aria-label="Psicóloga Daniela Bézi, voltar ao início">
+                <span class="brand-name">Daniela Bézi</span>
+                <span class="brand-role">Psicóloga</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <nav class="site-nav" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#sobre_mim">Sobre mim</a></li>
+                    <li><a href="#como_funciona">Sessões</a></li>
+                    <li><a href="#publico_atendido">Público atendido</a></li>
+                    <li><a href="#perguntas_frequentes">Perguntas frequentes</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn btn-whats btn-sm header-cta"
+                href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+                target="_blank" rel="noopener noreferrer">
+                <img src="imagens/whatsapp icon.png" alt="" class="icon-invert" width="18" height="18">
+                Chamar
+            </a>
         </div>
-    </div>
+    </header>
 
-    <div class="nav">
-        <a href="#sobre_mim">Sobre mim</a>
-        <a href="#publico_atendido">Público atendido</a>
-        <a href="#perguntas_frequentes">Perguntas frequentes</a>
-        <a href="#contato">Contato</a>
-    </div>
+    <main id="conteudo">
 
-    <div class="whatsBtn">
-        <a href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site." target="_blank"
-            rel="noopener noreferrer">
-            <div class="linkBloco">
-                <img src="/imagens/whatsapp.png" alt="icone de whatsapp">
-                <p>CHAMAR</p>
-            </div>
-        </a>
-    </div>
+        <!-- Hero -->
+        <section class="hero" id="inicio" aria-label="Apresentação">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1 class="sr-only">Psicóloga Daniela Bézi</h1>
+                    <img class="hero-logo" src="imagens/logo.png" alt="Logo Psicóloga Daniela Bêzi" width="1114"
+                        height="502">
 
-
-    <div class="container">
-
-
-
-        <div class="sobre_mim">
-            <div id="sobre_mim">
-                <div class="sobre_mim_bloco">
-                    <div class="infos">
-                        <div class="foto">
-                            <img style="box-shadow: inset 0 0 40px #00000033;" src="/imagens/retrato2.png"
-                                alt="foto pessoal Daniela Bêzi">
-                        </div>
-                        <div class="texto">
-                            <h1>Quem sou eu?</h1>
-                            <p>
-                                <br>
-                                Me chamo Daniela Saraiva Cardoso Bézi, sou psicóloga clínica, graduada pela Universidade
-                                Luterana do Brasil (ULBRA) e pós graduanda em Psicanálise Clínica Avançada, Psicanálise
-                                Infantil e Psicopatologia do Adolescente.
-                                <br>
-                                <br>
-                                Atualmente me dedico exclusivamente à clínica, onde atendo pacientes infantis,
-                                adolescentes e adultos com as mais variadas demandas em saúde mental.
-                                <br>
-                                <br>
-                                Acredito que cada pessoa é única e merece ser tratada com respeito e compreensão.
-                                Compreendo que pode ser difícil compartilhar seus pensamentos e sentimentos, mas estou
-                                aqui para ajudá-lo a superar quaisquer desafios que possa estar enfrentando.
+                    <figure class="hero-quote">
+                        <blockquote>
+                            <p>A psicoterapia não muda a sua história...<br> mas lhe oferece novos olhares sobre ela.
                             </p>
-                            <div class="texto_mobile_1">
-                                Me chamo Daniela Saraiva Cardoso Bézi, sou psicóloga clínica, graduada pela Universidade
-                                Luterana do Brasil (ULBRA) e pós graduanda em Psicanálise Clínica Avançada, Psicanálise
-                                Infantil e Psicopatologia do Adolescente.
-                                <br>
-                            </div>
-                        </div>
-                        <div class="texto_mobile_2">
-                            Atualmente me dedico exclusivamente à clínica, onde atendo pacientes infantis,
-                            adolescentes e adultos com as mais variadas demandas em saúde mental.
-                            <br>
-                            <br>
-                            Acredito que cada pessoa é única e merece ser tratada com respeito e compreensão.
-                            Compreendo que pode ser difícil compartilhar seus pensamentos e sentimentos, mas estou
-                            aqui para ajudá-lo a superar quaisquer desafios que possa estar enfrentando.
-                        </div>
+                        </blockquote>
+                        <figcaption>Lavinia Lins</figcaption>
+                    </figure>
 
+                    <div class="hero-actions">
+                        <a class="btn btn-whats btn-lg"
+                            href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="imagens/whatsapp icon.png" alt="" class="icon-invert" width="22" height="22">
+                            Chamar no WhatsApp
+                        </a>
+                        <a class="btn btn-ghost btn-lg" href="#sobre_mim">Conheça meu trabalho</a>
+                    </div>
+
+                    <ul class="hero-tags" aria-label="Destaques">
+                        <li>Presencial e online</li>
+                        <li>Infantil, adolescente e adulto</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-arch" aria-hidden="true"></div>
+                    <img class="hero-photo" src="imagens/fotos/daniela-recorte-1400.webp"
+                        srcset="imagens/fotos/daniela-recorte-800.webp 533w, imagens/fotos/daniela-recorte-1400.webp 933w"
+                        sizes="(max-width: 900px) 70vw, 460px" alt="Daniela Bézi sorrindo" width="933" height="1400"
+                        fetchpriority="high">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot" aria-hidden="true"></span>
+                        <span>
+                            <strong>Daniela Saraiva Cardoso Bézi</strong>
+                            Psicóloga clínica
+                        </span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
+        <!-- Quem sou eu -->
+        <section class="section about" id="sobre_mim" aria-labelledby="titulo-sobre">
+            <div class="container about-grid">
+                <div class="about-media" data-reveal>
+                    <img class="about-main" src="imagens/fotos/daniela-lendo-1600.webp"
+                        srcset="imagens/fotos/daniela-lendo-900.webp 600w, imagens/fotos/daniela-lendo-1600.webp 1066w"
+                        sizes="(max-width: 900px) 80vw, 420px" alt="Daniela Bézi sentada em um sofá, segurando um livro"
+                        width="1066" height="1600" loading="lazy">
+                    <img class="about-inset" src="imagens/fotos/daniela-estante-900.webp"
+                        alt="Daniela Bézi sorrindo em frente a uma estante de livros" width="600" height="900"
+                        loading="lazy">
+                </div>
 
-        <div class="publico_atendido">
-            <div id="publico_atendido">
-                <div class="publico_atendido_bloco">
-                    <h1>PÚBLICO ATENDIDO</h1>
-                    <div class="publicos">
-                        <div class="presencial">
-                            <h2 style="font-size: 45px;">Presencial</h2>
-                            <p>
-                                <br>
-                                Infantil, adolescente e adulto.
-                                <br>
-                                <br>
-                                Endereço: <br>
-                                Rua Uiara, nº 20
-                                Bairro Girassol
-                                <br>
-                                <br>
-                                Capão da Canoa - RS, 95555-000
-                            </p>
+                <div class="about-text" data-reveal>
+                    <p class="eyebrow">Sobre mim</p>
+                    <h2 id="titulo-sobre">Quem sou eu?</h2>
+                    <p class="lead">
+                        Me chamo <strong>Daniela Saraiva Cardoso Bézi</strong>, sou psicóloga clínica, graduada pela
+                        Universidade Luterana do Brasil (ULBRA) e pós graduanda em Psicanálise Clínica Avançada,
+                        Psicanálise Infantil e Psicopatologia do Adolescente.
+                    </p>
+                    <p>
+                        Atualmente me dedico exclusivamente à clínica, onde atendo pacientes infantis,
+                        adolescentes e adultos com as mais variadas demandas em saúde mental.
+                    </p>
+
+                    <div class="credentials">
+                        <div class="credential">
+                            <span class="credential-label">Graduação</span>
+                            <span class="credential-value">Universidade Luterana do Brasil (ULBRA)</span>
                         </div>
-                        <div class="online">
-                            <h2 style="font-size: 45px;">Online</h2>
+                        <div class="credential">
+                            <span class="credential-label">Pós-graduação em andamento</span>
+                            <ul class="chips chips-sm">
+                                <li>Psicanálise Clínica Avançada</li>
+                                <li>Psicanálise Infantil</li>
+                                <li>Psicopatologia do Adolescente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Destaque: valores -->
+        <section class="statement" aria-label="Minha forma de atender">
+            <div class="container statement-grid">
+                <div class="statement-text" data-reveal>
+                    <p class="statement-big">
+                        Acredito que cada pessoa é única e merece ser tratada com respeito e compreensão.
+                    </p>
+                    <p class="statement-small">
+                        Compreendo que pode ser difícil compartilhar seus pensamentos e sentimentos, mas estou
+                        aqui para ajudá-lo a superar quaisquer desafios que possa estar enfrentando.
+                    </p>
+                    <a class="btn btn-light btn-lg"
+                        href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="imagens/whatsapp icon.png" alt="" width="20" height="20">
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+                <div class="statement-media" data-reveal>
+                    <img src="imagens/fotos/daniela-sorrindo-1600.webp"
+                        srcset="imagens/fotos/daniela-sorrindo-900.webp 600w, imagens/fotos/daniela-sorrindo-1600.webp 1066w"
+                        sizes="(max-width: 900px) 90vw, 440px" alt="Daniela Bézi sorrindo, sentada no chão"
+                        width="1066" height="1600" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Como posso ajudar -->
+        <section class="section help" id="como_ajudar" aria-labelledby="titulo-ajuda">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Psicoterapia</p>
+                    <h2 id="titulo-ajuda">Como posso ajudar</h2>
+                </header>
+
+                <div class="bento">
+                    <figure class="bento-photo" data-reveal>
+                        <img src="imagens/fotos/daniela-janela-1600.webp"
+                            srcset="imagens/fotos/daniela-janela-900.webp 600w, imagens/fotos/daniela-janela-1600.webp 1066w"
+                            sizes="(max-width: 900px) 90vw, 380px" alt="Daniela Bézi sorrindo, sentada junto à janela"
+                            width="1066" height="1600" loading="lazy">
+                    </figure>
+
+                    <article class="bento-card bento-main" data-reveal>
+                        <p class="bento-lead">
+                            O principal objetivo da psicoterapia é <strong>ajudar pacientes com as suas demandas
+                                emocionais</strong>.
+                        </p>
+                        <ul class="chips" aria-label="Exemplos de demandas">
+                            <li>Carreira profissional</li>
+                            <li>Relações familiares</li>
+                            <li>Relacionamento afetivo</li>
+                            <li>Autoestima</li>
+                            <li>Depressão</li>
+                            <li>Ansiedade</li>
+                            <li class="chip-muted">Entre muitos outros</li>
+                        </ul>
+                    </article>
+
+                    <article class="bento-card bento-ages" data-reveal>
+                        <ul class="ages">
+                            <li>
+                                <span class="ages-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="8" r="3" />
+                                        <path d="M7 20c0-3 2.2-5 5-5s5 2 5 5" />
+                                    </svg>
+                                </span>
+                                Infantil
+                            </li>
+                            <li>
+                                <span class="ages-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="7" r="3.2" />
+                                        <path d="M6 21c0-3.6 2.7-6.2 6-6.2s6 2.6 6 6.2" />
+                                    </svg>
+                                </span>
+                                Adolescente
+                            </li>
+                            <li>
+                                <span class="ages-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="6.5" r="3.4" />
+                                        <path d="M5 21.5c0-4 3.1-7 7-7s7 3 7 7" />
+                                    </svg>
+                                </span>
+                                Adulto
+                            </li>
+                        </ul>
+                        <p>Pacientes infantis, adolescentes e adultos com as mais variadas demandas em saúde mental.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Como funcionam as sessões -->
+        <section class="section sessions" id="como_funciona" aria-labelledby="titulo-sessoes">
+            <div class="container sessions-grid">
+                <div class="sessions-text">
+                    <header data-reveal>
+                        <p class="eyebrow">Sessões</p>
+                        <h2 id="titulo-sessoes">Como funcionam as sessões</h2>
+                    </header>
+
+                    <dl class="stats">
+                        <div class="stat" data-reveal>
+                            <dt>45/50 <small>min</small></dt>
+                            <dd>Duração de cada sessão, tanto online como presencial.</dd>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <dt>1x <small>por semana</small></dt>
+                            <dd>As sessões são realizadas uma vez por semana.</dd>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <dt>Online <small>ou presencial</small></dt>
+                            <dd>As psicoterapias online são eficazes e possuem os mesmos resultados das consultas realizadas presencialmente.</dd>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <dt>Sem <small>período limite</small></dt>
+                            <dd>Na maioria dos casos, não é determinado um período limite para a realização das sessões.</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <figure class="sessions-media" data-reveal>
+                    <img src="imagens/fotos/daniela-mesa-1600.webp"
+                        srcset="imagens/fotos/daniela-mesa-900.webp 600w, imagens/fotos/daniela-mesa-1600.webp 1066w"
+                        sizes="(max-width: 900px) 90vw, 440px"
+                        alt="Daniela Bézi sentada à mesa, com livros e uma ampulheta" width="1066" height="1600"
+                        loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+
+        <!-- Público atendido -->
+        <section class="section audience" id="publico_atendido" aria-labelledby="titulo-publico">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Modalidades</p>
+                    <h2 id="titulo-publico">Público atendido</h2>
+                </header>
+
+                <div class="cards">
+                    <article class="card" data-reveal>
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 10.5 12 3l9 7.5" />
+                                <path d="M5 9v11h14V9" />
+                                <path d="M10 20v-6h4v6" />
+                            </svg>
+                        </div>
+                        <h3>Presencial</h3>
+                        <p class="card-audience">Infantil, adolescente e adulto.</p>
+                        <div class="card-detail">
+                            <p class="card-label">Endereço:</p>
+                            <address>
+                                Rua Uiara, nº 20<br>
+                                Bairro Girassol<br>
+                                Capão da Canoa - RS, <span class="nowrap">94690-166</span>
+                            </address>
+                        </div>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="12" rx="2" />
+                                <path d="M8 20h8M12 16v4" />
+                            </svg>
+                        </div>
+                        <h3>Online</h3>
+                        <p class="card-audience">Adolescente e adulto.</p>
+                        <div class="card-detail">
                             <p>
-                                <br>
-                                Adolescente e adulto.
-                                <br>
-                                <br>
                                 O atendimento é feito utilizando o seu smartphone ou computador através de uma
                                 videochamada.
-                                <br>
-                                <br>
-                                Obs.: Casos específicos como depressão grave e ideação suicida, por exemplo, não poderão
-                                ser atendidos online.
+                            </p>
+                            <p class="card-note">
+                                Obs.: Casos específicos como depressão grave e ideação suicida, por exemplo, não
+                                poderão ser atendidos online.
                             </p>
                         </div>
+                    </article>
+                </div>
+
+                <p class="notice" role="note" data-reveal>
+                    <strong>Atenção!</strong> Em ambas modalidades, caso o paciente seja menor de 18 anos é
+                    necessário uma autorização expressa dos pais ou responsáveis legais.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Perguntas frequentes -->
+        <section class="section faq" id="perguntas_frequentes" aria-labelledby="titulo-faq">
+            <div class="container faq-grid">
+                <aside class="faq-aside" data-reveal>
+                    <p class="eyebrow">Dúvidas</p>
+                    <h2 id="titulo-faq">Perguntas frequentes</h2>
+                    <img src="imagens/fotos/daniela-escada-900.webp"
+                        srcset="imagens/fotos/daniela-escada-900.webp 600w, imagens/fotos/daniela-escada-1600.webp 1066w"
+                        sizes="(max-width: 900px) 0px, 360px" alt="Daniela Bézi em pé, apoiada em uma parede"
+                        width="600" height="900" loading="lazy">
+                </aside>
+
+                <div class="faq-list">
+                    <details class="faq-item" name="faq">
+                        <summary>Quais são os objetivos da psicoterapia?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                O principal objetivo da psicoterapia é <strong>ajudar pacientes com as suas demandas
+                                    emocionais</strong>. Essas, por sua vez, são definidas por eles mesmos no início da
+                                psicoterapia ou ao longo das consultas.
+                            </p>
+                            <p>
+                                Um indivíduo pode ter problemas com a carreira profissional, relações familiares,
+                                relacionamento afetivo, autoestima, depressão, ansiedade, entre muitos outros.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" name="faq">
+                        <summary>Por quanto tempo preciso fazer psicoterapia?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                Na maioria dos casos, <strong>não é determinado um período limite para a realização
+                                    das sessões</strong>, pois vai depender de muitos fatores como, o engajamento do
+                                paciente e as particularidades de cada quadro.
+                            </p>
+                            <p>
+                                No geral, se for do desejo do indivíduo, ele pode fazer terapia durante a vida toda.
+                                Visto que se trata de um processo muito pautado no autoconhecimento e os benefícios são
+                                contínuos.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" name="faq">
+                        <summary>Quanto tempo duram as sessões?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                As sessões de psicoterapia, tanto online como presencial, duram <strong>entre 45/50
+                                    minutos</strong> e são realizadas <strong>uma vez por semana</strong>.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" name="faq">
+                        <summary>Há diferenças entre online e presencial?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                As psicoterapias online são eficazes e <strong>possuem os mesmos resultados</strong> das
+                                consultas realizadas presencialmente.
+                            </p>
+                            <p>
+                                <strong>O que muda são outros aspectos</strong>, como o fato de que não é preciso se
+                                deslocar até o consultório, há mais privacidade, comodidade, praticidade e economia
+                                para você.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" name="faq">
+                        <summary>Podem ser receitados remédios nas sessões?</summary>
+                        <div class="faq-answer">
+                            <p>
+                                <span class="destaque">Não!</span> O psicólogo ou psicóloga não é capacitado para
+                                receitar medicamentos, essa responsabilidade é do <strong>médico psiquiatra</strong>.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contato -->
+        <section class="section contact" id="contato" aria-labelledby="titulo-contato">
+            <div class="container">
+                <div class="contact-grid">
+                    <figure class="contact-photo" data-reveal>
+                        <img src="imagens/fotos/daniela-poltrona-1600.webp"
+                            srcset="imagens/fotos/daniela-poltrona-900.webp 600w, imagens/fotos/daniela-poltrona-1600.webp 1066w"
+                            sizes="(max-width: 900px) 90vw, 420px" alt="Daniela Bézi sentada em uma poltrona"
+                            width="1066" height="1600" loading="lazy">
+                    </figure>
+
+                    <div class="contact-card" data-reveal>
+                        <p class="eyebrow">Contato</p>
+                        <h2 id="titulo-contato">Entre em contato!</h2>
+
+                        <a class="btn btn-whats btn-lg btn-block"
+                            href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="imagens/whatsapp icon.png" alt="" class="icon-invert" width="22" height="22">
+                            Chamar no WhatsApp
+                        </a>
+
+                        <ul class="contact-list">
+                            <li>
+                                <span class="contact-label">E-mail</span>
+                                <a href="mailto:psi.danielabezi@gmail.com">psi.danielabezi@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="contact-label">Telefone / WhatsApp</span>
+                                <a href="tel:+5551993503843">(51) 99350-3843</a>
+                            </li>
+                        </ul>
+
+                        <div class="socials">
+                            <p class="contact-label">Minhas redes sociais</p>
+                            <div class="social-icons">
+                                <a href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+                                    target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                    <img src="imagens/whatsapp icon.png" alt="" width="22" height="22">
+                                </a>
+                                <a href="https://www.instagram.com/psi.danielabezi?igsh=Y2FpeWp6cm9mN3Rz"
+                                    target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <img src="imagens/instagram.png" alt="" width="22" height="22">
+                                </a>
+                                <a href="mailto:psi.danielabezi@gmail.com" aria-label="E-mail">
+                                    <img src="imagens/e-mail.png" alt="" width="22" height="22">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="texto_atencao">
-                        Atenção! Em ambas modalidades, caso o paciente seja menor de 18 anos é necessário uma
-                        autorização expressa dos pais ou responsáveis legais.
+                </div>
+
+                <div class="location-card" data-reveal>
+                    <div class="location-info">
+                        <div class="card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" />
+                                <circle cx="12" cy="9.5" r="2.5" />
+                            </svg>
+                        </div>
+                        <p class="contact-label">Consultório</p>
+                        <address>
+                            Rua Uiara, nº 20<br>
+                            Bairro Girassol<br>
+                            Capão da Canoa - RS, <span class="nowrap">94690-166</span>
+                        </address>
+                    </div>
+
+                    <div class="localizacao">
+                        <img src="imagens/fachada.jpeg" alt="Fachada do consultório" loading="lazy">
+                        <iframe title="Mapa: Rua Uiara, 20 - Girassol, Capão da Canoa - RS"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.0550609489262!2d-50.026239540117615!3d-29.765582432088166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951878869c86d893%3A0x7366b4fba023880e!2sR.%20Uiara%2C%2020%20-%20Girassol%2C%20Cap%C3%A3o%20da%20Canoa%20-%20RS%2C%2095555-000!5e1!3m2!1spt-BR!2sbr!4v1718476798409!5m2!1spt-BR!2sbr"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+    </main>
 
-
-        <div class="perguntas_frequentes">
-            <div id="perguntas_frequentes">
-                <div class="perguntas_frequentes_bloco">
-                    <h1>PERGUNTAS FREQUENTES</h1>
-                    <button type="button" class="btn_pergunta">&blacktriangledown; Quais são os objetivos da
-                        psicoterapia?</button>
-                    <div class="resposta_pergunta">
-                        O principal objetivo da psicoterapia é <b>ajudar pacientes com as suas demandas emocionais</b>.
-                        Essas,
-                        por sua vez, são definidas por eles mesmos no início da psicoterapia ou ao longo das consultas.
-                        <br>
-                        <br>
-                        Um indivíduo pode ter problemas com a carreira profissional, relações familiares, relacionamento
-                        afetivo, autoestima, depressão, ansiedade, entre muitos outros.
-                    </div>
-
-                    <button type="button" class="btn_pergunta">&blacktriangledown; Por quanto tempo preciso fazer
-                        psicoterapia?</button>
-                    <div class="resposta_pergunta">
-                        Na maioria dos casos, <b>não é determinado um período limite para a realização das sessões</b>,
-                        pois
-                        vai depender de muitos fatores como, o engajamento do paciente e as particularidades de cada
-                        quadro.
-                        <br>
-                        <br>
-                        No geral, se for do desejo do indivíduo, ele pode fazer terapia durante a vida toda. Visto que
-                        se trata de um processo muito pautado no autoconhecimento e os benefícios são contínuos.
-                    </div>
-
-                    <button type="button" class="btn_pergunta">&blacktriangledown; Quanto tempo duram as
-                        sessões?</button>
-                    <div class="resposta_pergunta">
-                        As sessões de psicoterapia, tanto online como presencial, duram <b>entre 45/50 minutos</b> e são
-                        realizadas <b>uma vez por semana</b>.
-                    </div>
-
-                    <button type="button" class="btn_pergunta">&blacktriangledown; Há diferenças entre online e
-                        presencial?</button>
-                    <div class="resposta_pergunta">
-                        As psicoterapias online são eficazes e <b>possuem os mesmos resultados</b> das consultas
-                        realizadas
-                        presencialmente.
-                        <br>
-                        <br>
-                        <b>O que muda são outros aspectos</b>, como o fato de que não é preciso se deslocar até o
-                        consultório,
-                        há mais privacidade, comodidade, praticidade e economia para você.
-                    </div>
-
-                    <button type="button" class="btn_pergunta">&blacktriangledown; Podem ser receitados remédios nas
-                        sessões?</button>
-                    <div class="resposta_pergunta">
-                        <span class="destaque">Não!</span> O psicólogo ou psicóloga não é
-                        capacitado para receitar medicamentos, essa responsabilidade
-                        é do <b>médico psiquiatra</b>.
-                    </div>
-
-                </div>
-
-
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="brand-name">Daniela Bézi</span>
+                <span class="brand-role">Psicóloga</span>
             </div>
+            <nav aria-label="Rodapé">
+                <ul class="footer-nav">
+                    <li><a href="#sobre_mim">Sobre mim</a></li>
+                    <li><a href="#publico_atendido">Público atendido</a></li>
+                    <li><a href="#perguntas_frequentes">Perguntas frequentes</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <p class="footer-credit">© xMachDigitalSolutions - 2026</p>
         </div>
+    </footer>
 
+    <a class="whats-fab" href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
+        target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
+        <img src="imagens/whatsapp icon.png" alt="" class="icon-invert" width="28" height="28">
+    </a>
 
-
-        <div class="contato">
-            <div id="contato">
-                <div class="contato_bloco">
-                    <div class="entre_em_contato">
-                        <h1>Entre em contato!</h1>
-                        <div class="email_e_telefone">
-                            <p>psi.danielabezi@gmail.com</p>
-                            <p>(51) 99350-3843</p>
-                        </div>
-                    </div>
-
-                    <div class="redes_sociais">
-                        Minhas redes sociais
-                        <div class="icones">
-                            <a href="https://api.whatsapp.com/send?phone=5551993503843&text=Oi,%20vim%20pelo%20seu%20site."
-                                target="_blank" rel="noopener noreferrer">
-                                <img src="/imagens/whatsapp icon.png" alt="icone whatsapp">
-                            </a>
-                            <a href="https://www.instagram.com/psi.danielabezi?igsh=Y2FpeWp6cm9mN3Rz" target="_blank"
-                                rel="noopener noreferrer">
-                                <img src="/imagens/instagram.png" alt="icone whatsapp">
-                            </a>
-                            <a href="mailto:psi.danielabezi@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img src="/imagens/e-mail.png" alt="icone whatsapp">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="endereco">
-                        Rua Uiara, nº 20
-                        <br>
-                        Bairro Girassol
-                        <br>
-                        Capão da Canoa - RS, 95555-000
-
-                        <div class="localizacao">
-                            <img src="/imagens/fachada.jpeg" alt="fachada do local">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1580.0550609489262!2d-50.026239540117615!3d-29.765582432088166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951878869c86d893%3A0x7366b4fba023880e!2sR.%20Uiara%2C%2020%20-%20Girassol%2C%20Cap%C3%A3o%20da%20Canoa%20-%20RS%2C%2095555-000!5e1!3m2!1spt-BR!2sbr!4v1718476798409!5m2!1spt-BR!2sbr"
-                                allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-
-                        
-                    </div>
-
-                    © xJoaoPedro - 2024
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-    <script>
-        $(document).ready(function () {
-            $('a').on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 1500, 'easeOutBack');
-                }
-            });
-        });
-    </script>
     <script src="collapse.js"></script>
 </body>
 
