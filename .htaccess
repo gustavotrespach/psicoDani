@@ -1,0 +1,63 @@
+# Configuração para hospedagens Apache / LiteSpeed (Hostinger, HostGator, Locaweb, KingHost...).
+# Em hospedagens que não usam Apache (Netlify, Vercel, Cloudflare Pages) este arquivo é ignorado.
+
+# --- Página inicial e listagem de pastas ---
+DirectoryIndex index.html
+Options -Indexes
+
+# --- Não expor arquivos de configuração ---
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# --- Tipos de arquivo ---
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType font/woff2 .woff2
+    AddType application/manifest+json .webmanifest
+    AddCharset utf-8 .html .css .js .txt .webmanifest
+</IfModule>
+
+# --- Compressão (deixa HTML, CSS e JS bem menores) ---
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/manifest+json image/svg+xml
+</IfModule>
+
+# --- Cache no navegador (visitas repetidas carregam instantaneamente) ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 week"
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# --- Segurança básica ---
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# --- Endereço oficial: sem "www" ---
+# www.psidaniela.online redireciona para psidaniela.online (evita conteúdo duplicado no Google).
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.psidaniela\.online$ [NC]
+    RewriteRule ^ https://psidaniela.online%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- HTTPS ---
+# Na Hostinger o redirecionamento de http para https já é feito pela própria hospedagem.
+# Não ative a regra abaixo lá: atrás da CDN da Hostinger ela pode causar um loop de redirecionamento.
+# Só é útil se o site for movido para outra hospedagem que não force HTTPS sozinha.
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>

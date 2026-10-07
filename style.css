@@ -2,6 +2,36 @@
    Psicóloga Daniela Bézi
    ========================================================================== */
 
+/* Fontes (hospedadas localmente, apenas caracteres latinos; licença SIL OFL)
+   ========================================================================== */
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    font-style: normal;
+    font-weight: 500 600;
+    font-display: swap;
+    src: url("fonts/cormorant-garamond.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    font-style: italic;
+    font-weight: 500 600;
+    font-display: swap;
+    src: url("fonts/cormorant-garamond-italic.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("fonts/mulish.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
     /* Paleta: o bege vem do logo, para o hero e o logo se fundirem */
     --sand: #D3C3A2;
@@ -10,7 +40,7 @@
     --cream: #FAF6EE;
     --paper: #FFFDF8;
     --ink: #3A332C;
-    --ink-soft: #62584D;
+    --ink-soft: #574D42;
     --accent: #7A6548;
     --line: rgba(58, 51, 44, 0.12);
     --whats: #1F8743;
@@ -442,7 +472,7 @@ strong {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: url("imagens/bg.png") center / 900px auto repeat;
+    background: url("imagens/bg.webp") center / 900px auto repeat;
     mix-blend-mode: multiply;
     opacity: 0.12;
 }
@@ -458,6 +488,11 @@ strong {
 .hero-content {
     align-self: center;
     padding-block: clamp(40px, 6vw, 80px);
+}
+
+.hero-title {
+    margin: 0;
+    line-height: 0;
 }
 
 .hero-logo {
@@ -720,7 +755,7 @@ strong {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: url("imagens/bg.png") center / 900px auto repeat;
+    background: url("imagens/bg.webp") center / 900px auto repeat;
     filter: invert(1);
     mix-blend-mode: screen;
     opacity: 0.05;
@@ -1167,7 +1202,7 @@ strong {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: url("imagens/bg.png") center / 900px auto repeat;
+    background: url("imagens/bg.webp") center / 900px auto repeat;
     mix-blend-mode: multiply;
     opacity: 0.08;
 }
